@@ -1,0 +1,184 @@
+name: Jaspreet Singh
+dob: 08/04/1993
+title: Full Stack Engineer | Ruby on Rails | React | Angular
+phone: +91 8054443614
+email: singh.jaspreet915@gmail.com
+address: Grover enclave, kapurthala
+nationality: indian
+about_me: Forward-looking <b>Full Stack developer</b> with 7+ years background in creating and executing
+          innovative software solutions to enhance business productivity. Highly experienced in all
+          aspects of the software development lifecycle and end-to-end project management. Skilled at coordinating
+          cross-functional teams in a fast-paced, deadline-driven environment.
+
+social:
+  github: https://github.com/jaspreet-3911
+  linkedin: https://www.linkedin.com/in/jaspreet-singh-41410a158/
+  stackoverflow: https://stackoverflow.com/users/8656871/jaspreet-singh-3911
+
+work_experience:
+  - title: Senior Software Engineer
+    company: Mckinsey & Company
+    start: 02/2022
+    present: true
+    location: Gurgaon, haryana
+    responsibilities:
+      - Ruby, Rails, React, PostgresSQL, Memcache, AWS(EKS), kubernetes, Micro services, GitHub Actions (CI/CD).
+      - Follow Agile Mindset.
+      - Code Reviews to ensure optimal and a standard code.
+      - Maintaining internal ruby libraries.
+      - Enhanced the application's features to effectively fix the bugs and optimize the
+        overall performance, reliability, and efficiency.
+  - title: Senior Software Engineer
+    company: Watermark
+    start: 11/2019
+    end: 02/2022
+    location: Mohali, punjab
+    responsibilities:
+      - Ruby, Rails, React, Angular, MongoDB, sidekiq, redis.
+      - Follow Agile Mindset.
+      - Responsible of adding new features, optimizing the existing code and an accessible product.
+      - Code Reviews to ensure optimal and a standard code.
+      - Enhanced the application's features to effectively fix the bugs and optimize the
+        overall performance, reliability, and efficiency.
+      - Redesigned company's web-based application and provided beneficial increase
+        in NPS(Net promoter score) for the product.
+      - Awarded Award of excellence for the year 2020 for my performance.
+  - title: Software Engineer
+    company: Skyach
+    start: 06/2015
+    end: 10/2019
+    location: Mohali, punjab
+    responsibilities:
+      - Worked on the multiple software projects simultaneously and participated in the whole
+        software development process from design to implementation and delivery.
+      - Design, develop, test, deploy, maintain and improve software.
+      - Knowledge of performance testing, stress testing, functional testing, unit testing.
+      - Recognized by executives for completing projects in a timely manner and within budget.
+      - Promoted company to get new contracts based on my performance of delivery of products for the clients.
+      - Awarded with Employee of the year for three consecutive years for my performance.
+skills:
+  - Ruby: 100%
+  - Rails: 100%
+  - React: 70%
+  - Angular: 70%
+  - Javascrpt: 90%
+  - Typescript: 80%
+  - PostgreSQL: 70%
+  - MongoDB: 75%
+  - MySQL: 60%
+  - GIT: 100%
+  - Linux: 80%
+  - Docker: 100%
+  - DockerCompose: 100%
+  - Sidekiq: 100%
+  - Redis: 100%
+  - RabbitMQ: 80%
+  - GraphQL: 60%
+  - Solr: 70%
+  - Elasticsearch: 70%
+  - Vault: 60%
+  - Nginx: 100%
+  - Rspec: 100%
+  - travis: 80%
+  - jenkins: 80%
+  - GitlabCI: 80%
+  - GitlabActions: 80%
+  - GCP: 70%
+  - AWS: 80%
+  - Heroku: 80%
+  - DigitalOcean: 80%
+projects:
+  - name: Watermark
+    image: images/watermark.jpg
+    link: https://www.vialivetext.com
+    stack:
+      - Rails 5
+      - Angular JS
+      - React JS
+      - MongoDB
+      - Redis
+      - Solr
+      - Sidekiq
+      - Accessibility(NVDA)
+      - CSS
+      - Coffeescript
+      - Javascript
+      - Docker
+      - Docker Compose
+  - name: Bitvast (Crypto currency Exchange)
+    image: images/bitvast.jpg
+    link: https://trade.bitvast.com/trading/ethbtc
+    stack:
+      - Rails 6
+      - React JS
+      - Microservices
+      - WebSockets
+      - PostgreSQL
+      - Sidekiq
+      - SendGrid
+      - Coffeescript
+      - Javascript
+      - Docker
+      - Docker Compose
+      - ETH | BTC | LTC | BCH | XRP | DASH | TRON | EOS | MONERO
+  - name: Peatio (Opensource Crypto Platform Provider)
+    image: images/peatio.jpg
+    link: https://github.com/rubykube/peatio
+    description:
+      - It's an opensource crypto exchange provider.
+      - I was one of the core developer for this opensource project.
+      - Having support for ETH, BTC, XRP, LTC, BCH Crypto currencies.
+  - name: NextLyst (NextMine)
+    image: images/nextlyst.jpg
+    link: http://www.nextlyst.com/
+    stack:
+      - Rails 5
+      - Bootstrap
+      - DelayedJob
+      - Multi-Tenant
+      - PostgreSQL
+      - Android
+      - ResQue
+      - MongoDB
+      - Javascript
+  - name: Dinny
+    image: images/dinny.jpg
+    link: http://www.dinny.co/
+    stack:
+      - Rails 5
+      - Bootstrap
+      - DelayedJob
+      - PostgreSQL
+      - Google Calender API
+      - Coffescript
+      - MemCache
+      - SendGrid
+      - ResQue
+      - Javascript
+
+education:
+  - title: Bachelor of technology (computer science)
+    institute: Punjab Technical University
+    start: 08/2011
+    end: 08/2015
+    location: kapurthala, punjab, india
+    description: cleared with first division(81%).
+
+certificates:
+  - title: SAFEe 5 Practitioner
+    url: https://www.credly.com/badges/b63121a6-7448-413f-b9ed-53f21e542b2e/linked_in
+    date: 08/2021
+
+awards:
+  - title: Award of Excellence
+    company: Watermark
+    description: Award of Excellence for the year 2020 for best performance
+    date: 11/2020
+  - title: Hackathon (1st Position)
+    company: Watermark
+    description: Built a chat App inside the current working product suite.
+    date: 09/2020
+  - title: Hackathon (2nd Position)
+    company: Watermark
+    description: Built an AI prototype using OpenAI tool.
+    date: 11/2021

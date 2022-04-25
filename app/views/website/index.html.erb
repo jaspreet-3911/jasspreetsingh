@@ -1,0 +1,209 @@
+<div class="resume-container">
+  <div class="shadow-1-strong bg-white my-5" id="intro">
+    <div class="bg-info text-white">
+      <div class="cover bg-image"><img src="images/header-background.jpg"/>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
+          <div class="text-center p-5">
+            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/avatar.jpg" width="160" height="160"/></div>
+            <div class="header-bio mt-3">
+              <div data-aos="zoom-in" data-aos-delay="0">
+                <h2 class="h1"><%= @data[:name] %></h2>
+                <p><%= @data[:title] %></p>
+              </div>
+              <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
+                <nav role="navigation">
+                  <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="https://stackoverflow.com/users/8656871/jaspreet-singh-3911" title="Stack overflow"><i class="fab fa-stack-overflow"></i><span class="menu-title sr-only">Twitter</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/jaspreet-singh-41410a158/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">Facebook</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/jaspreet-3911" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="d-print-none"><a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="resume.pdf" data-aos="fade-right" data-aos-delay="700">Download CV</a><a class="btn btn-info btn-lg shadow-sm mt-1" href="#contact" data-aos="fade-left" data-aos-delay="700">Hire Me</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shadow-1-strong bg-white my-5 p-5" id="about">
+    <div class="about-section">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="h2 fw-light mb-4">About Me</h2>
+          <%= @data[:about_me].html_safe %>
+        </div>
+        <div class="col-md-5 offset-lg-1">
+          <div class="row mt-2">
+            <h2 class="h2 fw-light mb-4">Bio</h2>
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Date of Birth</div>
+            </div>
+            <div class="col-sm-7">
+              <div class="pb-2"><%= humaize_date @data[:dob] %></div>
+            </div>
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
+            </div>
+            <div class="col-sm-7">
+              <div class="pb-2"><%= @data[:email] %></div>
+            </div>
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
+            </div>
+            <div class="col-sm-7">
+              <div class="pb-2"><%= @data[:phone] %></div>
+            </div>
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
+            </div>
+            <div class="col-sm-7">
+              <div class="pb-2"><%= @data[:address] %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
+    <div class="skills-section">
+      <h2 class="h2 fw-light mb-4">Professional Skills</h2>
+      <div class="row">
+        <% @data[:skills].each do |skill| %>
+          <% skill.each do |k,v| %>
+            <div class="mb-3 wid-30"><span class="fw-bolder"><%= k.to_s %></span>
+              <div class="progress my-2 rounded" style="height: 20px">
+                <div class="progress-bar bg-info" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: <%= v %>;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="shadow-1-strong bg-white my-5 p-5" id="experience">
+    <div class="work-experience-section">
+      <h2 class="h2 fw-light mb-4">Work Experience</h2>
+      <div class="timeline">
+        <% @data[:work_experience].each_with_index do |experience, index| %>
+          <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="<%= index * 100 %>">
+            <div class="timeline-head px-4 pt-3">
+              <div class="h5"><%= experience[:title] %> <span class="text-muted h6">at <%= experience[:company] %></span></div>
+            </div>
+            <div class="timeline-body px-4 pb-4">
+              <div class="text-muted text-small mb-3">
+                <%= humanize_work_date experience[:start] %> - <%= experience.fetch(:present, false) ? 'Present' : humanize_work_date(experience[:end]) %>
+              </div>
+              <ul>
+                <% experience[:responsibilities].each do |res| %>
+                  <li><%= res %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="shadow-1-strong bg-white my-5 p-5" id="education">
+    <div class="education-section">
+      <h2 class="h2 fw-light mb-4">Education</h2>
+      <div class="timeline">
+        <% @data[:education].each_with_index do |edu, index| %>
+          <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="<%= index * 100 %>">
+          <div class="timeline-head px-4 pt-3">
+            <div class="h5"><%= edu[:title] %> <span class="text-muted h6">from <%= edu[:institute] %></span></div>
+          </div>
+          <div class="timeline-body px-4 pb-4">
+            <div class="text-muted text-small mb-3"><%= humanize_work_date edu[:start] %> - <%= humanize_work_date edu[:end] %></div>
+            <div><%= edu[:description] %></div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio">
+    <div class="portfolio-section">
+      <h2 class="h2 fw-light mb-4">Portfolio</h2>
+      <% @data[:projects].each_with_index do |project, index| %>
+        <% if index.odd? %>
+          <div class="row g-0">
+            <div class="col-md-6"><a href="<%= project[:link] %>" target="_blank"><img class="img-fluid" src="<%= project[:image] %>" width="800" height="500"/></a></div>
+            <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="<%= index * 100 %>">
+              <div class="m-4 mt-md-2">
+                <h3><%= project[:name] %></h3>
+                <p class="text-muted"><%= project[:stack] ? project[:stack].join(' | ') : project[:description].join('. ') %></p>
+              </div>
+            </div>
+          </div>
+        <% else %>
+          <div class="row g-0 portfolio-reverse">
+            <div class="col-md-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="<%= index * 100 %>">
+              <div class="m-4 mt-md-2 text-end">
+                <h3><%= project[:name] %></h3>
+                <p class="text-muted"><%= project[:stack] ? project[:stack].join(' | ') : project[:description].join('. ') %></p>
+              </div>
+            </div>
+            <div class="col-md-6"><a href="<%= project[:link] %>" target="_blank"><img class="img-fluid" src="<%= project[:image] %>" width="800" height="500"/></a></div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="shadow-1-strong bg-white my-5 p-5" id="references">
+    <div class="reference-section">
+      <h2 class="h2 fw-light mb-4">Certificates</h2>
+      <div class="row">
+        <% @data[:certificates].each_with_index do |certificate, index| %>
+          <div class="col-md-6">
+            <div class="d-flex mb-2">
+              <div class="header-bio m-3 mb-0">
+                <a href="<%= certificate[:url] %>" target="_blank">
+                  <h3 class="h6 mb-1" data-aos="fade-left" data-aos-delay="<%= index * 100 %>"><%= certificate[:title] %></h3>
+                </a>
+                <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100"><%= humanize_work_date certificate[:date] %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
+    <div class="contant-section">
+      <h2 class="h2 fw-light text mb-4">Contact</h2>
+      <div class="row mb-4">
+        <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
+          <div class="mt-1">
+            <div class="h6"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> <%= @data[:phone] %></div>
+            <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> <%= @data[:email] %></div>
+          </div>
+          <div class="mt-5 d-print-none"><form action="#"
+                                               method="get">
+            <div class="form-outline mb-4">
+              <input type="text" id="name" class="form-control" required/>
+              <label class="form-label" for="name">Name</label>
+            </div>
+            <div class="form-outline mb-4">
+              <input type="email" id="email" class="form-control" required/>
+              <label class="form-label" for="email">Email address</label>
+            </div>
+            <div class="form-outline mb-4">
+              <textarea class="form-control" style="resize: none;" id="message" rows="4" required></textarea>
+              <label class="form-label" for="message">Message</label>
+            </div>
+            <button class="btn btn-info btn-block mb-4" type="submit">Send</button>
+          </form>
+          </div>
+        </div>
+        <div class="col-md-7 d-print-none" data-aos="zoom-in" data-aos-delay="100">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27251.17645026487!2d75.37436474169787!3d31.375613610717096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a4854dcaaea2b%3A0x613bdd0931c8e3c9!2sKapurthala%2C%20Punjab!5e0!3m2!1sen!2sin!4v1650916679596!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
