@@ -69,7 +69,7 @@ skills:
   - GIT: 100%
   - Linux: 80%
   - Docker: 100%
-  - DockerCompose: 100%
+  - Docker Compose: 100%
   - Sidekiq: 100%
   - Redis: 100%
   - RabbitMQ: 80%
@@ -81,12 +81,12 @@ skills:
   - Rspec: 100%
   - travis: 80%
   - jenkins: 80%
-  - GitlabCI: 80%
-  - GitlabActions: 80%
+  - Gitlab CI: 80%
+  - Gitlab Actions: 80%
   - GCP: 70%
   - AWS: 80%
   - Heroku: 80%
-  - DigitalOcean: 80%
+  - Digital Ocean: 80%
 projects:
   - name: Watermark
     image: images/watermark.jpg
