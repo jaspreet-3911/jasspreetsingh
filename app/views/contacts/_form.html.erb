@@ -1,0 +1,23 @@
+<% if @notice %><p class="alert alert-success" style="text-align: center;"><%= @notice %></p><% end %>
+<% if @contact.errors.present? %><p class="alert alert-danger" style="text-align: center;"><%= @contact.errors.full_messages.join(', ') %></p><% end %>
+<%= form_for @contact, remote: true, method: :post do |f| %>
+
+  <div class="form-outline mb-4">
+    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.label :name, 'Name', class: 'form-label'%>
+  </div>
+
+  <div class="form-outline mb-4">
+    <%= f.text_field :from, required: true, class: 'form-control' %>
+    <%= f.label :from, 'Email',  class: 'form-label'%>
+  </div>
+
+  <div class="form-outline mb-4">
+    <%= f.text_area :message, required: true, rows: 4, class: 'form-control', style: "resize: none;" %>
+    <%= f.label :message, 'Message',  class: 'form-label'%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Send', class: 'btn btn-info btn-block mb-4' %>
+  </div>
+<% end %>

@@ -20,3 +20,7 @@ module Mysite
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+  html_tag.html_safe
+end
