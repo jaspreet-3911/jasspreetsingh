@@ -173,11 +173,15 @@ awards:
     company: Watermark
     description: Award of Excellence for the year 2020 for best performance
     date: 11/2020
-  - title: Hackathon (1st Position)
+  - title: Hackathon (1st)
     company: Watermark
     description: Built a chat App inside the current working product suite.
     date: 09/2020
-  - title: Hackathon (2nd Position)
+  - title: Hackathon (2nd)
     company: Watermark
     description: Built an AI prototype using OpenAI tool.
     date: 11/2021
+  - title: Hackathon (2nd)
+    company: Gitlab
+    description: Submitted 8 Merge Requests.
+    date: 03/2022

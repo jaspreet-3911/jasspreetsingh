@@ -154,6 +154,7 @@
       <% end %>
     </div>
   </div>
+  <% if @data[:certificates] %>
   <div class="shadow-1-strong bg-white my-5 p-5" id="references">
     <div class="reference-section">
       <h2 class="h2 fw-light mb-4">Certificates</h2>
@@ -173,6 +174,32 @@
       </div>
     </div>
   </div>
+  <% end %>
+  <% if @data[:awards] %>
+    <div class="shadow-1-strong bg-white my-5 p-5" id="awards">
+      <div class="reference-section">
+        <h2 class="h2 fw-light mb-4">Awards</h2>
+        <div class="row">
+          <% @data[:awards].each_with_index do |award, index| %>
+            <div class="col-md-6">
+              <div class="d-flex mb-2">
+                <div class="header-bio m-3 mb-0">
+                  <div class="h5" data-aos="fade-left" data-aos-delay="<%= index * 100 %>">
+                    <%= award[:title] %>
+                    <span class="text-muted h6"><%= award[:company] %> - <%= humanize_work_date award[:date] %></span>
+                  </div>
+                  <!--                <h3 class="h6 mb-1" data-aos="fade-left" data-aos-delay="<%#= index * 100 %>"><%#= award[:title] %></h3>-->
+                  <!--                <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100"><%#= award[:company] %> - <%#= humanize_work_date award[:date] %></p>-->
+                  <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100"><%= award[:description] %></p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
   <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
     <div class="contant-section">
       <h2 class="h2 fw-light text mb-4">Contact</h2>

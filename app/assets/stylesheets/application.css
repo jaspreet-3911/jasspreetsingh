@@ -17,4 +17,8 @@
 .wid-25 { width: 25%; }
 .wid-30 { width: 30%; }
 #contact iframe { width: 100% }
+.progress {
+    height: 5px !important;
+    border-color: unset !important;
+}
 /*.bg-info { background-color: grey !important; }*/
