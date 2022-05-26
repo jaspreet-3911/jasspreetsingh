@@ -51,12 +51,14 @@
             <div class="col-sm-7">
               <div class="pb-2"><%= @data[:email] %></div>
             </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2"><%= @data[:phone] %></div>
-            </div>
+            <% if @data[:phone] %>
+              <div class="col-sm-5">
+                <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
+              </div>
+              <div class="col-sm-7">
+                <div class="pb-2"><%= @data[:phone] %></div>
+              </div>
+            <% end %>
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
             </div>
