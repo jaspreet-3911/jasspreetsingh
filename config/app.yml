@@ -167,9 +167,9 @@ certificates:
   - title: SAFEe 5 Practitioner
     url: https://www.credly.com/badges/b63121a6-7448-413f-b9ed-53f21e542b2e/linked_in
     date: 08/2021
- - title: AWS Certified Cloud Practitioner
-   url: https://www.credly.com/badges/7da76011-be0a-4721-bd6e-116e8ce2c325
-   date: 05/2022
+  - title: AWS Certified Cloud Practitioner
+    url: https://www.credly.com/badges/7da76011-be0a-4721-bd6e-116e8ce2c325
+    date: 05/2022
 
 awards:
   - title: Award of Excellence
